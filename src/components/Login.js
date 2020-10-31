@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Login.css'
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [name, setName] = useState('');
@@ -81,7 +82,13 @@ const Login = () => {
             </form>
             <div className="no-account">
               <p className="m-0 pt-3 pb-2 small-text">Don't have an account yet?</p>
-              <button className="btn button-reverse btn-block">Sign Up</button>
+            
+                              <Link
+                                to="/register"
+                                className="text-muted font-weight-medium ml-1"
+                              >
+                                <strong>Sign Up</strong>
+                              </Link>
             </div>
       </div>
      </div>

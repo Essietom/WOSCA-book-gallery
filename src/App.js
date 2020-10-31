@@ -3,6 +3,7 @@ import './App.scss';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Gallery from './components/Gallery';
 import Login from './components/Login';
+import Register from "./components/Register";
 
 function App(props) {
   return (
@@ -12,6 +13,8 @@ function App(props) {
         <Redirect to="/login" />
         </Route>
         <Route path="/login" component={Login}/>
+        <Route exact path="/register" component={Register} />
+
       </React.Fragment>
     </Router>
   );
